@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+  --bg: #e9f0ea;
+  --bg-deep: #d7e5db;
+  --paper: #fffcf7;
+  --paper-2: #f4faf6;
+  --ink: #15241e;
+  --muted: #5a6b63;
+  --line: #d5e0d8;
+  --green: #163d2f;
+  --green-mid: #1f5a44;
+  --green-soft: #e2f1e8;
+  --mint: #8fbc9e;
+  --gold: #b8862d;
+  --gold-soft: #fff6e4;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --ok: #0d7a4a;
+  --shadow: 0 14px 34px rgba(21, 36, 30, 0.08);
+  --shadow-sm: 0 6px 16px rgba(21, 36, 30, 0.06);
+  --radius: 20px;
+  --font: "DM Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(1000px 480px at 8% -8%, #fff9ef 0%, transparent 52%),
+    radial-gradient(820px 420px at 96% 4%, rgba(143, 188, 158, 0.35) 0%, transparent 48%),
+    radial-gradient(640px 320px at 50% 100%, rgba(22, 61, 47, 0.06) 0%, transparent 55%),
+    linear-gradient(180deg, #f3f7f3 0%, var(--bg) 45%, var(--bg-deep) 100%);
+  background-attachment: fixed;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:where(button, a, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}

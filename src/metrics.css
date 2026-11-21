@@ -1,0 +1,270 @@
+/* 数据看板（产品验证基础设施） */
+
+.pm-card {
+  margin-bottom: 14px;
+}
+
+.pm-card .section-head {
+  margin-bottom: 16px;
+}
+
+.pm-north {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.7fr) 1.4fr;
+  gap: 18px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f1f8f3, #fffaf0);
+  border: 1px solid var(--line);
+}
+
+.pm-north-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pm-north-value strong {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+}
+
+.pm-north-value span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.pm-north-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.pm-north-copy .note {
+  margin: 0 0 8px;
+}
+
+.pm-north-copy .ok,
+.pm-north-copy .warn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.pm-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.pm-day {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.pm-day-bar-wrap {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 54px;
+  border-radius: 8px;
+  background: #eef4ef;
+  overflow: hidden;
+}
+
+.pm-day-bar {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(180deg, var(--mint), var(--green-mid));
+  min-height: 4px;
+}
+
+.pm-day small {
+  font-variant-numeric: tabular-nums;
+}
+
+.pm-foot {
+  display: block;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  font-size: 0.84rem;
+}
+
+.pm-foot .ico {
+  margin-right: 4px;
+}
+
+.pm-funnel {
+  display: grid;
+  gap: 10px;
+}
+
+.pm-funnel-row {
+  display: grid;
+  grid-template-columns: 26px 1fr 22px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f6f9f6;
+  border: 1px solid rgba(213, 224, 216, 0.7);
+}
+
+.pm-funnel-row.is-reached {
+  background: var(--green-soft);
+  border-color: rgba(31, 90, 68, 0.18);
+}
+
+.pm-funnel-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--green-mid);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.pm-funnel-label {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.86rem;
+}
+
+.pm-funnel-label span,
+.pm-funnel-label em {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-style: normal;
+}
+
+.pm-funnel-label em {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.pm-funnel-track {
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.pm-funnel-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--green-mid);
+  min-width: 2px;
+}
+
+.pm-funnel-mark {
+  color: var(--ok);
+  display: inline-flex;
+  justify-content: center;
+}
+
+.pm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pm-grid > div {
+  padding: 12px;
+  border-radius: 14px;
+  background: #f7faf7;
+  border: 1px solid rgba(213, 224, 216, 0.8);
+  min-width: 0;
+}
+
+.pm-grid .metric-value {
+  font-size: 1.12rem;
+  margin-top: 6px;
+}
+
+.pm-log {
+  display: grid;
+  gap: 2px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.pm-log-row {
+  display: grid;
+  grid-template-columns: 130px 130px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 12px;
+  background: #f7faf7;
+  font-size: 0.8rem;
+}
+
+.pm-log-row:nth-child(even) {
+  background: #fffdf8;
+}
+
+.pm-log-row span {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.pm-log-row em {
+  color: var(--muted);
+  font-style: normal;
+  word-break: break-all;
+}
+
+.pm-actions {
+  margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+  .pm-north {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .pm-north-value {
+    justify-content: flex-start;
+  }
+
+  .pm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pm-log-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .pm-log-row em {
+    font-size: 0.74rem;
+  }
+
+  .pm-funnel-label em {
+    margin-left: 0;
+  }
+}
